@@ -27,6 +27,8 @@ class Factura extends Migration
             $table->date('Fecha');
             $table->integer('id_users')->unsigned();
             $table->foreign('id_users')->references('id_users')->on('users');
+            $table->integer('id_atraccion')->unsigned();
+            $table->foreign('id_atraccion')->references('id_atraccion')->on('Atracciones');
             $table->timestamps();
         });
     }

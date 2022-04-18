@@ -13,8 +13,11 @@ class CreateAtraccionesTable extends Migration
      */
     public function up()
     {
-        Schema::create('Atraccion', function (Blueprint $table) {
-            $table->id();
+        Schema::create('Atracciones', function (Blueprint $table) {
+            $table->increments('id_atraccion');
+            $table->string('nombre_atraccion');
+            $table->string('descripcion_atraccion');
+            $table->int('capacidad_atraccion');
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ class CreateAtraccionesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('atraccions');
+        Schema::dropIfExists('Atracciones');
     }
 }
