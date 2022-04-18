@@ -24,7 +24,7 @@ class StoreRolRequest extends FormRequest
     public function rules()
     {
         return [
-            
+            'nombre_rol' => 'required|string|'
         ];
     }
 }
