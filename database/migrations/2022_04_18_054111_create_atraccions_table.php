@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAtraccionsTable extends Migration
+class CreateAtraccionesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateAtraccionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('atraccions', function (Blueprint $table) {
+        Schema::create('Atraccion', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
         });
