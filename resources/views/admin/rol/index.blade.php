@@ -8,5 +8,16 @@
 </head>
 <body>
     <h1>pussy </h1>
+<form action="{{url('/rol')}}"  method="post">
+@csrf
+    <label > Nombre rol</label>
+<input type="text" name="nombre_rol" >
+
+<button type="submit"></button>
+
+</form>
+
+
+
 </body>
 </html>

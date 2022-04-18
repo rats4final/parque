@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use App\Models\rolModelo;
 
 
+use App\Http\Requests\StoreRolRequest;
+
+
 class rolController extends Controller
 {
 
@@ -28,15 +31,22 @@ class rolController extends Controller
 
     }
 
-    public function store(Request $request)
+    public function store(StoreRolRequest $request)
     {
         //
 
-        $rol=request()->except('_token');
 
-        rolModelo::create($rol);
+        //rolModelo::create($request->all());
+
+         $rol=$request->all();
+
+         $rol=request()->except('_token');
+
+         rolModelo::create($rol);
 
         return redirect('/rol');
+
+       //return $rol;
 
     }
 
