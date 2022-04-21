@@ -14,7 +14,7 @@ class Souvenir extends Migration
     public function up()
     {
         //
-        Schema::create('Souvenir', function (Blueprint $table) {
+        Schema::create('Souvenirs', function (Blueprint $table) {
             $table->Increments('id_souvenir');
             $table->string('Nombre_souv');
             $table->string('Descripcion_souv');
@@ -31,6 +31,6 @@ class Souvenir extends Migration
     public function down()
     {
         //
-        Schema::dropIfExists('Souvenir');
+        Schema::dropIfExists('Souvenirs');
     }
 }

@@ -15,7 +15,7 @@ class Lugar extends Migration
     {
         //
 
-        Schema::create('Lugar', function (Blueprint $table) {
+        Schema::create('Lugares', function (Blueprint $table) {
             $table->Increments('id_lugar');
             $table->string('Nombre_lugar');
             $table->string('Descrpcion_lugar');
@@ -34,6 +34,6 @@ class Lugar extends Migration
     public function down()
     {
         //
-        Schema::dropIfExists('Lugar');
+        Schema::dropIfExists('Lugares');
     }
 }

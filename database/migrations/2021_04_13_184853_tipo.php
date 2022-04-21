@@ -14,7 +14,7 @@ class Tipo extends Migration
     public function up()
     {
         //
-        Schema::create('Tipo', function (Blueprint $table) {
+        Schema::create('Tipos_tickets', function (Blueprint $table) {
             $table->Increments('id_tipo');
             $table->string('Nombre_tipo');
             $table->string('Descripcion_tipo');
@@ -30,6 +30,6 @@ class Tipo extends Migration
     public function down()
     {
         //
-        Schema::dropIfExists('Tipo');
+        Schema::dropIfExists('Tipos_tickets');
     }
 }

@@ -14,14 +14,14 @@ class Ticket extends Migration
     public function up()
     {
         //
-        Schema::create('Ticket', function (Blueprint $table) {
+        Schema::create('Tickets', function (Blueprint $table) {
             $table->Increments('id_ticket');
             $table->string('Codigo');
             $table->date('Fecha');
             $table->Integer('precio');
             $table->date('Expiracion');
             $table->Integer('id_tipo')->unsigned();
-            $table->foreign('id_tipo')->references('id_tipo')->on('Tipo');
+            $table->foreign('id_tipo')->references('id_tipo')->on('Tipos_tickets');
             $table->timestamps();
         });
     }
@@ -34,6 +34,6 @@ class Ticket extends Migration
     public function down()
     {
         //
-        Schema::dropIfExists('Ticket');
+        Schema::dropIfExists('Tickets');
     }
 }
