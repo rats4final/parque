@@ -4,7 +4,7 @@
 
 <form action="{{url('/user')}}" method="post">
 
-    @csrf
+    @csrf {{-- pinche marco olvida tokens--}}
 
     <label>name</label><br> <input type="text" class="form-control" name="name" id="name" required>
 
