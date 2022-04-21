@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\rolController;
+use App\Http\Controllers\UserController;
 
 
 
@@ -21,3 +22,4 @@ Route::get('/', function () {
 });
 
 Route::resource('rol', rolController::class);
+Route::resource('user', UserController::class);
