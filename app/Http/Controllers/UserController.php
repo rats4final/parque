@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -13,10 +14,10 @@ class UserController extends Controller
         //
         $usuario=User::all();
 
-        //return view('admin.user.index',compact('usuario'));
+        return view('admin.user.index',compact('usuario'));
 
 
-        return $usuario;
+        //return $usuario;
 
 
     }
@@ -42,9 +43,12 @@ class UserController extends Controller
 
         $usuario= array_merge($Nivel, $usuario);
 
-         User::create($usuario);
+        User::create($usuario);
 
         return redirect('/user');
+
+
+        //return $usuario;
     }
 
 
