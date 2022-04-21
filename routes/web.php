@@ -17,8 +17,13 @@ use App\Http\Controllers\UserController;
 |
 */
 
+/*
 Route::get('/', function () {
     return view('welcome');
+}); */ 
+
+Route::get('/', function(){
+    return view('main');
 });
 
 Route::resource('rol', rolController::class);
