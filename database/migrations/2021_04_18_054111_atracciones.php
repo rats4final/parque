@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAtraccionesTable extends Migration
+class Atracciones extends Migration
 {
     /**
      * Run the migrations.
@@ -14,10 +14,10 @@ class CreateAtraccionesTable extends Migration
     public function up()
     {
         Schema::create('Atracciones', function (Blueprint $table) {
-            $table->increments('id_atraccion');
+            $table->Increments('id_atraccion');
             $table->string('nombre_atraccion');
             $table->string('descripcion_atraccion');
-            $table->int('capacidad_atraccion');
+            $table->integer('capacidad_atraccion');
             $table->timestamps();
         });
     }

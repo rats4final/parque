@@ -28,7 +28,7 @@ class Factura extends Migration
 
             $table->integer('id_souvenir')->unsigned();
             $table->foreign('id_souvenir')->references('id_souvenir')->on('Souvenirs');
-            $table->date('Fecha');
+            $table->date('fecha');
 
             $table->integer('id_users')->unsigned();
             $table->foreign('id_users')->references('id_users')->on('users');
