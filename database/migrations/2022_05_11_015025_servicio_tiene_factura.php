@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class UserControlaAtracion extends Migration
+class ServicioTieneFactura extends Migration
 {
     /**
      * Run the migrations.
@@ -14,13 +14,11 @@ class UserControlaAtracion extends Migration
     public function up()
     {
         //
-        Schema::create('Usuario_opera_servicio', function (Blueprint $table) {
+        Schema::create('Servicio_tiene_factura', function (Blueprint $table) {
             $table->integer('servicios_id_servicio')->unsigned();
-            $table->foreign('servicios_id_servicio')->references('id_servicio')->on('Servicios');
-            $table->integer('users_id_user')->unsigned();
-            $table->foreign('users_id_user')->references('id_users')->on('users');
-            $table->time('turno_inicio');
-            $table->time('turno_fin');
+            $table->foreign('servicio_id_servicio')->references('id_servicio')->on('Servicios');
+            $table->integer('facturas_id_factura')->unsigned();
+            $table->foreign('facturas_id_factura')->references('id_factura')->on('Facturas');
             $table->timestamps();
         });
     }

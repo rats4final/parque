@@ -2,9 +2,9 @@
 
 @include('layouts.nav')
 
-<form action="{{url('/user')}}" method="post">
+<form action="{{ url('/user') }}" method="post">
 
-    @csrf {{-- pinche marco olvida tokens--}}
+    @csrf {{-- pinche marco olvida tokens --}}
 
     <label>name</label><br> <input type="text" class="form-control" name="name" id="name" required>
 
@@ -12,6 +12,6 @@
 
     <label>password</label><br> <input type="text" class="form-control" name="password" id="password" required>
 
-    <button type="submit" >registro</button>
+    <button type="submit">registro</button>
 
-    </form>
+</form>

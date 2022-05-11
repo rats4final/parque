@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Clientes extends Migration
+class Categorias extends Migration
 {
     /**
      * Run the migrations.
@@ -14,12 +14,10 @@ class Clientes extends Migration
     public function up()
     {
         //
-        Schema::create('Clientes', function (Blueprint $table) {
-            $table->Increments('id_cliente');
-            $table->string('Nombre_cli');
-            $table->string('Apellido_cli');
-            $table->string('Ci');
-            $table->string('Celular');
+        Schema::create('Categorias', function (Blueprint $table) {
+            $table->Increments('id_categoria');
+            $table->string('nombre_categoria');
+            $table->string('descripcion_categoria');
             $table->timestamps();
         });
     }
@@ -32,7 +30,6 @@ class Clientes extends Migration
     public function down()
     {
         //
-
-        Schema::dropIfExists('Clientes');
+        Schema::dropIfExists('Categorias');
     }
 }
