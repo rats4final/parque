@@ -1,8 +1,9 @@
 <!--pinche david -->
 
-@include('layouts.nav')
+@extends('layouts.nav')
 @section('tittle','Registro user')
 
+@section('contenido')
 <div class="card bg-dark text-white">
     <div class="card-body">
 
@@ -34,4 +35,7 @@
 </div>
 </div>
 </div>
+@endsection
+
+
 

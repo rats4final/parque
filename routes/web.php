@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\rolController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ServiciosController;
+use App\Http\Controllers\categoriaController;
+
 
 
 
@@ -31,3 +33,4 @@ Route::get('/', function(){
 Route::resource('servicio', ServiciosController::class);
 Route::resource('rol', rolController::class);
 Route::resource('user', UserController::class);
+Route::resource('categoria', categoriaController::class);
