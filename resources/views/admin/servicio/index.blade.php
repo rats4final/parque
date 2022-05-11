@@ -22,7 +22,7 @@
                     <td>{{ $servicio->descripcion_servicio }}</td>
                     <td>{{ $servicio->precio_servicio }}</td>
                     <td>{{ $servicio->imagen_servicio }}</td>
-                    <td>XD</td>
+                    <td>{{ $servicio->categorias->nombre_categoria}}</td>
                     <td style="width: 50px;">
                         <a title="Editar"> </a>
                         <button type="submit" title="Eliminar">

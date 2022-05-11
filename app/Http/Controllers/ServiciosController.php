@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Servicios;
+use App\Models\categoriaModelo;
 use App\Http\Requests\StoreServiciosRequest;
 use App\Http\Requests\UpdateServiciosRequest;
 
@@ -16,6 +17,7 @@ class ServiciosController extends Controller
     public function index()
     {
         $servicios = Servicios::get();
+        
         return view('admin.servicio.index',compact('servicios'));
     }
 

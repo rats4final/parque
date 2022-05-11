@@ -8,6 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Servicios extends Model
 {
     use HasFactory;
+
+    protected $table = 'servicios';
+    protected $primaryKey = 'id_servicio';
     protected $fillable = [
     'nombre_servicio',
     'descripcion_servicio',
@@ -15,4 +18,11 @@ class Servicios extends Model
     'imagen_servicio',
     'id_categoria',
     ];
+
+    public function categorias()//un servicio tiene solo 1 categoria
+    {
+        return $this->belongsTo(categoriaModelo::class,'id_categoria');
+    }
 }
+
+
