@@ -29,7 +29,7 @@
     <section class="section-transform-top">
       <div class="container">
         <div class="box-booking">
-            <h1 class="box-default-title"><center>nombre creativo</center></h1>
+            <h1 class="box-default-title"><center>Monte mayor</center></h1>
         </div>
       </div>
     </section>
@@ -44,8 +44,7 @@
           </div>
           <div class="col-lg-6 col-xl-5 wow fadeInRight">
             <h2>Sobre Nosotros</h2>
-            <p>Y aqui pondria algo sobre nosotros</p>
-            <p>Si tan solo tubiermos algo</p>
+            <p>Somos un grupo de desarrolladores humildes con una gran ambicion dispuesto a mejorar, con la intencion de imnovar en el ambito tecnologico.</p>
           </div>
         </div>
       </div>
@@ -58,7 +57,7 @@
       <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-twitter" href="#"></a></li>
       <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-youtube-play" href="https://youtu.be/dQw4w9WgXcQ"></a></li>
     </ul>
-    <p class="rights"><span>&copy;&nbsp; </span><span class="copyright-year"></span><span>&nbsp;</span><span>Nombre creativo</span><span>.&nbsp;</span><span>All Rights Reserved.</span><span>&nbsp;</span></p>
+    <p class="rights"><span>&copy;&nbsp; </span><span class="copyright-year"></span><span>&nbsp;</span><span>Monte mayor</span><span>.&nbsp;</span><span>All Rights Reserved.</span><span>&nbsp;</span></p>
   </footer>
 </body>
 </html>
