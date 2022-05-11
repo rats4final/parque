@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Contcategorialers;
+namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\categoriaModelo;
 
-class categoriaContcategorialer extends Controller
+class categoriaController extends Controller
 {
     public function index()
 
@@ -41,7 +41,7 @@ class categoriaContcategorialer extends Controller
          categoriaModelo::create($categoria);
 
          return redirect('/categoria');
-    
+
 
        //return $categoria;
 
