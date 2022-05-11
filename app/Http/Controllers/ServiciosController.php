@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Atraccion;
-use App\Http\Requests\StoreAtraccionRequest;
-use App\Http\Requests\UpdateAtraccionRequest;
+use App\Models\Servicios;
+use App\Http\Requests\StoreServiciosRequest;
+use App\Http\Requests\UpdateServiciosRequest;
 
-class AtraccionController extends Controller
+class ServiciosController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class AtraccionController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.servicio.index');
     }
 
     /**
@@ -31,10 +31,10 @@ class AtraccionController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreAtraccionRequest  $request
+     * @param  \App\Http\Requests\StoreServiciosRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreAtraccionRequest $request)
+    public function store(StoreServiciosRequest $request)
     {
         //
     }
@@ -42,10 +42,10 @@ class AtraccionController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Atraccion  $atraccion
+     * @param  \App\Models\Servicios  $servicios
      * @return \Illuminate\Http\Response
      */
-    public function show(Atraccion $atraccion)
+    public function show(Servicios $servicios)
     {
         //
     }
@@ -53,10 +53,10 @@ class AtraccionController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Atraccion  $atraccion
+     * @param  \App\Models\Servicios  $servicios
      * @return \Illuminate\Http\Response
      */
-    public function edit(Atraccion $atraccion)
+    public function edit(Servicios $servicios)
     {
         //
     }
@@ -64,11 +64,11 @@ class AtraccionController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateAtraccionRequest  $request
-     * @param  \App\Models\Atraccion  $atraccion
+     * @param  \App\Http\Requests\UpdateServiciosRequest  $request
+     * @param  \App\Models\Servicios  $servicios
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateAtraccionRequest $request, Atraccion $atraccion)
+    public function update(UpdateServiciosRequest $request, Servicios $servicios)
     {
         //
     }
@@ -76,10 +76,10 @@ class AtraccionController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Atraccion  $atraccion
+     * @param  \App\Models\Servicios  $servicios
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Atraccion $atraccion)
+    public function destroy(Servicios $servicios)
     {
         //
     }
