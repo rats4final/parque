@@ -19,6 +19,7 @@ class Servicios extends Migration
             $table->string('nombre_servicio');
             $table->string('descripcion_servicio');
             $table->double('precio_servicio');
+            $table->string('imagen_servicio');
             $table->integer('id_categoria')->unsigned();
             $table->foreign('id_categoria')->references('id_categoria')->on('Categorias');
             $table->timestamps();
