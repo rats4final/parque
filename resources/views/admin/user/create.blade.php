@@ -1,7 +1,7 @@
 <!--pinche david -->
 
 @extends('layouts.nav')
-@section('tittle','Registro user')
+@section('title','Registro user')
 
 @section('contenido')
 <div class="card bg-dark text-white">

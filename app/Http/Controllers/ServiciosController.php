@@ -17,7 +17,8 @@ class ServiciosController extends Controller
     public function index()
     {
         $servicios = Servicios::get();
-        
+
+        // return $servicios;
         return view('admin.servicio.index',compact('servicios'));
     }
 

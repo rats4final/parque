@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\rolController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ServiciosController;
@@ -34,3 +35,20 @@ Route::resource('servicio', ServiciosController::class);
 Route::resource('rol', rolController::class);
 Route::resource('user', UserController::class);
 Route::resource('categoria', categoriaController::class);
+
+
+//User::factory()->create(['email'=>'admin@gmail.com'])
+Route::view('login', 'login');
+Route::post('login', function(){
+
+    $credenciales=request()->only('email','password');
+
+    if (Auth::attempt($credenciales)) {
+        request()->session()->regenerate();
+        return redirect('/');
+    }
+
+    return redirect('login');
+});
+
+
