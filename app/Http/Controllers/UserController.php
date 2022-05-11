@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 
 class UserController extends Controller
 {
@@ -44,6 +45,8 @@ class UserController extends Controller
         $usuario= array_merge($Nivel, $usuario);
 
         User::create($usuario);
+
+        Session::flash('Registro_de_users','Usuario registrado');
 
         return redirect('/user');
 
