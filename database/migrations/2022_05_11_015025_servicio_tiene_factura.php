@@ -16,7 +16,7 @@ class ServicioTieneFactura extends Migration
         //
         Schema::create('Servicio_tiene_factura', function (Blueprint $table) {
             $table->integer('servicios_id_servicio')->unsigned();
-            $table->foreign('servicio_id_servicio')->references('id_servicio')->on('Servicios');
+            $table->foreign('servicios_id_servicio')->references('id_servicio')->on('Servicios');
             $table->integer('facturas_id_factura')->unsigned();
             $table->foreign('facturas_id_factura')->references('id_factura')->on('Facturas');
             $table->timestamps();
