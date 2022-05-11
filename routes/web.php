@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\rolController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ServiciosController;
+
 
 
 
@@ -20,11 +22,12 @@ use App\Http\Controllers\UserController;
 /*
 Route::get('/', function () {
     return view('welcome');
-}); */ 
+}); */
 
 Route::get('/', function(){
-    return view('main');
+    return view('mane');
 });
 
+Route::resource('servicio', ServiciosController::class);
 Route::resource('rol', rolController::class);
 Route::resource('user', UserController::class);
