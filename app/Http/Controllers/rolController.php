@@ -44,7 +44,8 @@ class rolController extends Controller
 
          rolModelo::create($rol);
 
-        return redirect('/rol');
+         return redirect('/rol');
+    
 
        //return $rol;
 

@@ -25,7 +25,7 @@ Route::get('/', function () {
 }); */
 
 Route::get('/', function(){
-    return view('main');
+    return view('mane');
 });
 
 Route::resource('servicio', ServiciosController::class);
