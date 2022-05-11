@@ -17,10 +17,6 @@ class UserController extends Controller
 
         return view('admin.user.index',compact('usuario'));
 
-
-        //return $usuario;
-
-
     }
 
 
