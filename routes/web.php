@@ -23,7 +23,7 @@ Route::get('/', function () {
 }); */ 
 
 Route::get('/', function(){
-    return view('main');
+    return view('mane');
 });
 
 Route::resource('rol', rolController::class);
