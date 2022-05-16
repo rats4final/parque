@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
-
+use App\Http\Requests\Admin__create;
 class UserController extends Controller
 {
 
@@ -27,7 +27,7 @@ class UserController extends Controller
     }
 
 
-    public function store(Request $request)
+    public function store(Admin__create $request)
     {
         //
         $usuario=$request->all();
@@ -46,8 +46,6 @@ class UserController extends Controller
 
         return redirect('/user');
 
-
-        //return $usuario;
     }
 
 

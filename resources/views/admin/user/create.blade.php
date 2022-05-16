@@ -21,13 +21,31 @@
 
     @csrf {{-- pinche marco olvida tokens --}}
 
-    <label>Nombres</label><br> <input type="text" class="form-control" name="name" id="name" required> <br>
-    <label>Apellidos</label><br> <input type="text" class="form-control" name="apellido" id="apellido" required><br>
-    <label>Fecha nacimiento </label><br> <input type="date" class="form-control" name="fecha_nac_user" id="fecha_nac_user" required><br>
-    <label>Celular</label><br> <input type="number" class="form-control" name="Celular" id="Celular" required><br>
-    <label>Email</label><br> <input type="text" class="form-control" name="email" id="email"  placeholder="Correo@example.com" required><br>
-    <label>Contraseña</label><br> <input type="password" class="form-control" name="password" id="password" required><br>
+    <label>Nombres</label><br> <input type="text" class="form-control" name="name" id="name" required>
+ @error('name')
+            <li class="text-danger">{{$message}}</li>
+            @enderror
+    <label>Apellidos</label><br> <input type="text" class="form-control" name="apellido" id="apellido" required>
+ @error('apellido')
+            <li class="text-danger">{{$message}}</li>
+            @enderror
+    <label>Fecha nacimiento </label><br> <input type="date" class="form-control" name="fecha_nac_user" id="fecha_nac_user" max="2003-12-31" min="1965-12-01" required>
+
+    <label>Celular</label><br> <input type="text" class="form-control" name="Celular" id="Celular" required>
+    @error('Celular')
+    <li class="text-danger">{{$message}}</li>
+    @enderror
+    <label>Email</label><br> <input type="text" class="form-control" name="email" id="email"  placeholder="Correo@example.com" required>
+    @error('email')
+    <li class="text-danger">{{$message}}</li>
+    @enderror
+    <label>Contraseña</label><br> <input type="password" class="form-control" name="password" id="password" required>
+    @error('password')
+    <li class="text-danger">{{$message}}</li><br>
+    @enderror
     <button type="submit" class="btn btn-primary">registro</button>
+
+
 
 </form>
 
