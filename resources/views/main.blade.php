@@ -51,6 +51,8 @@
     </section>
   </div>
   <footer class="section footer-minimal context-dark">
+    <div class="col-12">
+      
     <ul class="social-list">
       <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-facebook" href="#"></a></li>
       <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-instagram" href="#"></a></li>
