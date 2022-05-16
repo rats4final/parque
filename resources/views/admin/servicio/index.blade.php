@@ -6,10 +6,10 @@
         <thead>
             <tr>
                 <th>Id</th>
+                <th>Codigo del Servicio</th>
                 <th>Nombre del Servicio</th>
                 <th>Descripción del servicio</th>
                 <th>Precio</th>
-                <th>Imagen</th>
                 <th>Categoria</th>
                 <th>Acciones</th>
             </tr>
@@ -17,17 +17,14 @@
         <tbody>
             @foreach ($servicios as $servicio)
                 <tr>
-                    <th scope="row">{{ $servicio->nombre_servicio }}</th>
+                    <th>{{ $servicio->id_servicio }}</th>
+                    <th>{{ $servicio->codigo }}</th>
                     <td>{{ $servicio->nombre_servicio }}</td>
                     <td>{{ $servicio->descripcion_servicio }}</td>
                     <td>{{ $servicio->precio_servicio }}</td>
-                    <td>{{ $servicio->imagen_servicio }}</td>
                     <td>{{ $servicio->categorias->nombre_categoria}}</td>
-                    <td style="width: 50px;">
-                        <a title="Editar"> </a>
-                        <button type="submit" title="Eliminar">
-                        </button>
-                    </td>
+                    <td><a class="btn btn-success" href="{{ route('servicio.edit', $servicio) }}" title="Editar"></a></td>
+                    {{-- <td><a class="btn btn-danger" href="{{ route('servicio.destroy', $servicio) }}" title="Eliminar"></a></td> --}}
                 </tr>
             @endforeach
         </tbody>

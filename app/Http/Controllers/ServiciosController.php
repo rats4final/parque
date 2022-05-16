@@ -29,7 +29,8 @@ class ServiciosController extends Controller
      */
     public function create()
     {
-        //
+        $categorias = categoriaModelo::get();
+        return view('admin.servicio.create',compact('categorias'));//los enviamos
     }
 
     /**
@@ -40,7 +41,19 @@ class ServiciosController extends Controller
      */
     public function store(StoreServiciosRequest $request)
     {
-        //
+        if ($request->hasFile('picture')) { //procesamos la imagen y le damos un nombre custom
+            $file= $request->file('picture');
+            $image_name = time().'-'.$file->getClientOriginalName();
+            $file->move(public_path("/image"),$image_name);
+        }
+        $servicio =Servicios::create($request->all()+[
+            'image'=>$image_name //este array contiene el nombre de la imagen
+        ]);
+
+        $servicio->update([
+            'codigo'=>$servicio->id]);
+
+        return redirect()->route('servicio.index');
     }
 
     /**

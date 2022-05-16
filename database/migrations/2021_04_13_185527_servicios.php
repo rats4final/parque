@@ -16,6 +16,7 @@ class Servicios extends Migration
         //
         Schema::create('Servicios', function (Blueprint $table) {
             $table->Increments('id_servicio');
+            $table->integer('codigo');
             $table->string('nombre_servicio');
             $table->string('descripcion_servicio');
             $table->double('precio_servicio');
