@@ -1,13 +1,19 @@
 @include('layouts.nav')
 <h1>Index Servicios</h1>
 
+
+<div class="d-flex justify-content-end">
+    <label>Crear nuevo Servicio</label>
+    <a href="{{route('servicio.create')}}" class="btn btn-primary">Crear</a>
+</div>
+<br>
 <div class="table-responsive">
     <table id="tablitas" class="table caption-top">
         <caption>Lista de Servicios</caption>
         <thead class="table-dark">
             <tr>
                 <th>Id</th>
-                <th>Codigo del Servicio</th>
+                {{-- <th>Codigo del Servicio</th> --}}
                 <th>Nombre del Servicio</th>
                 <th>Descripción del servicio</th>
                 <th>Precio</th>
@@ -19,7 +25,6 @@
             @foreach ($servicios as $servicio)
                 <tr>
                     <th>{{ $servicio->id_servicio }}</th>
-                    <th>{{ $servicio->codigo }}</th>
                     <td>{{ $servicio->nombre_servicio }}</td>
                     <td>{{ $servicio->descripcion_servicio }}</td>
                     <td>{{ $servicio->precio_servicio }}</td>

@@ -4,7 +4,7 @@
 @section('contenido')
     <div class="container mt-5">
         {{-- {!! Form::open(['route' => 'servicio.store', 'method' => 'POST', 'files' => true]) !!} --}}
-        <form action="{{ route('servicio.create') }}" method="post">
+        <form action="{{ route('servicio.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3">
                 <label for="nombre_servicio" class="form-label">Nombre del Servicio</label>
@@ -27,8 +27,8 @@
                 </select>
             </div>
             <div class="mb-3">
-                <label for="imagen_servicio" class="form-label">Imagen del Servicio</label><br>
-                <input class="dropify" type="file" name="imagen_servicio" id="imagen_servicio" data-allowed-file-extensions="jpg jpeg png svg webmb">
+                <label for="picture" class="form-label">Imagen del Servicio</label><br>
+                <input class="dropify" type="file" name="picture" id="picture" data-allowed-file-extensions="jpg jpeg png svg webm">
             </div>
             <button type="submit" class="btn btn-primary">Registrar</button>
         </form>
