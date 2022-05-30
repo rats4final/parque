@@ -1,5 +1,5 @@
 @extends('layouts.nav')
-@section('tittle','Editar Usuario')
+@section('title','Editar Usuario')
 @section('contenido')
 <div class="container mt-5">
 

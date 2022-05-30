@@ -1,5 +1,5 @@
 @extends('layouts.nav')
-@section('tittle','Show user')
+@section('title','Show user')
 @section('contenido')
 <div class="container mt-5">
 <div class="card">

@@ -1,5 +1,6 @@
 @extends('admin.rol.layout')
 @section('content')
+@include('layouts.nav')
     <div class="container">
         <div class="row">
             <div class="col-md-9">
@@ -14,7 +15,7 @@
                         <br/>
                         <br/>
                         <div class="table-responsive">
-                            <table class="table">
+                            <table class="table" id="tablitas">
                                 <thead>
                                     <tr>
                                         <th>#</th>
@@ -49,3 +50,5 @@
         </div>
     </div>
 @endsection
+<script src="js/tables.js">
+</script>

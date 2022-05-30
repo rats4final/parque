@@ -17,8 +17,6 @@ class Factura extends Migration
         Schema::create('Facturas', function (Blueprint $table) {
             $table->Increments('id_factura');
             $table->dateTime('fecha_factura');
-            $table->integer('id_users')->unsigned();
-            $table->foreign('id_users')->references('id_users')->on('users');
             $table->timestamps();
         });
     }

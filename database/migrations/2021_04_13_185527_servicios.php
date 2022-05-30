@@ -16,10 +16,11 @@ class Servicios extends Migration
         //
         Schema::create('Servicios', function (Blueprint $table) {
             $table->Increments('id_servicio');
+            // $table->integer('codigo');
             $table->string('nombre_servicio');
             $table->string('descripcion_servicio');
             $table->double('precio_servicio');
-            $table->string('imagen_servicio');
+            $table->string('imagen_servicio')->nullable();
             $table->integer('id_categoria')->unsigned();
             $table->foreign('id_categoria')->references('id_categoria')->on('Categorias');
             $table->timestamps();
