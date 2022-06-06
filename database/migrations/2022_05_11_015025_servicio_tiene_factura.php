@@ -19,6 +19,8 @@ class ServicioTieneFactura extends Migration
             $table->foreign('servicios_id_servicio')->references('id_servicio')->on('Servicios');
             $table->integer('facturas_id_factura')->unsigned();
             $table->foreign('facturas_id_factura')->references('id_factura')->on('Facturas');
+            $table->integer('cantidad');
+            $table->decimal('precio_unitario');
             $table->timestamps();
         });
     }
@@ -31,6 +33,6 @@ class ServicioTieneFactura extends Migration
     public function down()
     {
         //
-        Schema::dropIfExists('Usuario_opera_servicio');
+        Schema::dropIfExists('Servicio_tiene_factura');
     }
 }
