@@ -37,18 +37,18 @@ Route::resource('user', UserController::class);
 Route::resource('categoria', categoriaController::class);
 Route::resource('factura', FacturasController::class);
 
-//User::factory()->create(['email'=>'admin@gmail.com'])
-// Route::view('login', 'login');
-// Route::post('login', function(){
+// User::factory()->create(['email'=>'admin@gmail.com']);
+Route::view('login', 'login_old');
+Route::post('login', function(){
 
-//     $credenciales=request()->only('email','password');
+    $credenciales=request()->only('email','password');
 
-//     if (Auth::attempt($credenciales)) {
-//         request()->session()->regenerate();
-//         return redirect('/');
-//     }
+    if (Auth::attempt($credenciales)) {
+        request()->session()->regenerate();
+        return redirect('/');
+    }
 
-//     return redirect('login');
-// });
+    return redirect('login');
+});
 
 
