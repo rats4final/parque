@@ -9,6 +9,11 @@
   </div>
 
  @endif
+
+<img src="" alt="">
+{!! QrCode::generate('Transfórmame en un QrCode!'); !!}
+
+
 <div class="container mt-5">
         <div class="row">
             <div class="col-md-12">

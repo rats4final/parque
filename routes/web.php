@@ -7,7 +7,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\ServiciosController;
 use App\Http\Controllers\categoriaController;
 
-
+use App\Http\Controllers\FacturasController;
 
 
 
@@ -35,7 +35,7 @@ Route::resource('servicio', ServiciosController::class);
 Route::resource('rol', rolController::class);
 Route::resource('user', UserController::class);
 Route::resource('categoria', categoriaController::class);
-
+Route::resource('factura', FacturasController::class);
 
 //User::factory()->create(['email'=>'admin@gmail.com'])
 Route::view('login', 'login');
