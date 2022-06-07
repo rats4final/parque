@@ -16,7 +16,14 @@ class Factura extends Migration
         //
         Schema::create('Facturas', function (Blueprint $table) {
             $table->Increments('id_factura');
-            $table->dateTime('fecha_factura');
+            $table->dateTime('fecha_emision');
+            $table->string('user')->nullable();
+            $table->integer('total');
+            $table->string('cliente');
+            $table->date('fecha_maxima_emision');
+            $table->string('ci_cliente')->nullable();
+            $table->string('autorizacion');
+            $table->string('codigo_control');
             $table->timestamps();
         });
     }
