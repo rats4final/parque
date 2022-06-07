@@ -49,6 +49,7 @@
                     </li>
                 </ul>
             </div>
+            @guest
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul class="navbar-nav ">
                     <li class="nav-item">
@@ -56,6 +57,19 @@
                     </li>
                 </ul>
             </div>
+            @endguest
+            @auth
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav ">
+                    <li class="nav-item">
+                    <form method="POST" action="{{route('logout')}}">
+                        @csrf
+                        <button class="btn btn-secondary btn-sm">Logout</button>
+                    </form>
+                    </li>
+                </ul>
+            </div>
+            @endauth
         </div>
     </nav>
 

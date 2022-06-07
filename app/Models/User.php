@@ -8,7 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmail
 {
     use HasApiTokens, HasFactory, Notifiable;
 
@@ -23,7 +23,7 @@ class User extends Authenticatable
         'name',
         'apellido',
         'fecha_nac_user',
-        'Celular',
+        'celular',
         'email',
         'email_verified_at',
         'password',
@@ -36,10 +36,10 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    // protected $hidden = [
-    //     'password',
-    //     'remember_token',
-    // ];
+    protected $hidden = [
+         'password',
+         'remember_token',
+    ];
 
     /**
      * The attributes that should be cast.
