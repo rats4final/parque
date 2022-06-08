@@ -35,7 +35,7 @@ class FacturasController extends Controller
         $usuario=request()->except('_token');
 
 
-        QrCode::format('png')->size(500)->generate($usuario['name'] . $usuario['apellido'] , '../public/storage/qrcodes/nose.png');
+        QrCode::format('svg')->size(500)->generate($usuario['name'] . $usuario['apellido'] , '../public/storage/qrcodes/nose.svg');
 
 
 
