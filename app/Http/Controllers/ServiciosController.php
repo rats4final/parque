@@ -47,7 +47,7 @@ class ServiciosController extends Controller
             $file->move(public_path("/image"),$image_name);
         }
         Servicios::create($request->all()+[
-            'image'=>$image_name //este array contiene el nombre de la imagen
+            'imagen_servicio'=>$image_name //este array contiene el nombre de la imagen
         ]);
 
         return redirect()->route('servicio.index');
