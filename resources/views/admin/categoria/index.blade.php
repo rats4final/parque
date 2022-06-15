@@ -1,5 +1,5 @@
-@extends('admin.categoria.layout')
-@section('content')
+@extends('layouts.sidebar')
+@section('contenido')
     <div class="container">
         <div class="row">
             <div class="col-md-9">

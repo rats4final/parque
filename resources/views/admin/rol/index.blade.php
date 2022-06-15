@@ -1,5 +1,5 @@
-@include('layouts.nav')
-
+@extends('layouts.sidebar')
+@section('contenido')
     <div class="container">
         <div class="row">
             <div class="col-md-9">
@@ -48,6 +48,6 @@
             </div>
         </div>
     </div>
-
+    @endsection
 <script src="js/tables.js">
 </script>
