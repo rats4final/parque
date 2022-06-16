@@ -1,3 +1,5 @@
+@extends('layouts.sidebar')
+@section('contenido')
 @include('layouts.nav')
 <h1>Index Servicios</h1>
 
@@ -36,6 +38,6 @@
         </tbody>
     </table>
 </div>
-
+@endsection
 <script src="js/tables.js">
 </script>
