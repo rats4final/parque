@@ -18,7 +18,7 @@
 </head>
 <body>
 
-    <h1> Solo no borres los hidden ni el script el resto borralo si quieres hasta el controlador :3</h1>
+    <h1> Solo no borres los hidden ni el script el resto borralo si quieres hasta el controlador :3 :3</h1>
 
 
 
