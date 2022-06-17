@@ -1,4 +1,5 @@
 @extends('layouts.nav')
+@extends('layouts.sidebar')
 @section('title','Registro user') {{-- dos letras t nmms marco --}}
 @section('contenido')
 @if(Session::has('Registro_de_users'))
