@@ -23,10 +23,10 @@
             </span>
             @enderror
         </div>
-        {{-- <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Recuerdame</label>
-        </div> --}}
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="remember" name="remember">
+            <label class="form-check-label" for="remember">Recuerdame</label>
+        </div>
         <button type="submit" class="btn btn-primary">Ingresar</button>
     </form>
 </div>
