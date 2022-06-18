@@ -19,7 +19,7 @@ class Factura extends Migration
             $table->dateTime('fecha_emision');
             $table->string('user')->nullable();
             $table->integer('total');
-            $table->string('cliente');
+            $table->string('cliente')->nullable();
             $table->date('fecha_maxima_emision');
             $table->string('ci_cliente')->nullable();
             $table->string('autorizacion');

@@ -15,12 +15,14 @@ class ServicioTieneFactura extends Migration
     {
         //
         Schema::create('Servicio_tiene_factura', function (Blueprint $table) {
+            $table->increments('id_detalle');
             $table->integer('servicios_id_servicio')->unsigned();
             $table->foreign('servicios_id_servicio')->references('id_servicio')->on('Servicios');
             $table->integer('facturas_id_factura')->unsigned();
             $table->foreign('facturas_id_factura')->references('id_factura')->on('Facturas');
             $table->integer('cantidad');
             $table->decimal('precio_unitario');
+            $table->integer('descuento');
             $table->timestamps();
         });
     }

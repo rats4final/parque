@@ -1,6 +1,6 @@
-@extends('layouts.sidebar')
+@extends('layouts.nav')
+@section('title','Servicios')
 @section('contenido')
-@include('layouts.nav')
 <h1>Index Servicios</h1>
 
 
@@ -10,9 +10,9 @@
 </div>
 <br>
 <div class="table-responsive">
-    <table id="tablitas" class="table caption-top">
+    <table id="tablitas" class="table">
         <caption>Lista de Servicios</caption>
-        <thead class="table-dark">
+        <thead>
             <tr>
                 <th>Id</th>
                 {{-- <th>Codigo del Servicio</th> --}}
@@ -26,7 +26,7 @@
         <tbody>
             @foreach ($servicios as $servicio)
                 <tr>
-                    <th>{{ $servicio->id_servicio }}</th>
+                    <td>{{ $servicio->id_servicio }}</td>
                     <td>{{ $servicio->nombre_servicio }}</td>
                     <td>{{ $servicio->descripcion_servicio }}</td>
                     <td>{{ $servicio->precio_servicio }}</td>
@@ -39,5 +39,4 @@
     </table>
 </div>
 @endsection
-<script src="js/tables.js">
-</script>
+

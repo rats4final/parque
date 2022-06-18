@@ -49,6 +49,4 @@
             </div>
         </div>
     </div>
-    @endsection
-<script src="js/tables.js">
-</script>
+@endsection

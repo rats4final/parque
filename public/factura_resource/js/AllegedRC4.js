@@ -1,4 +1,17 @@
 /**
+ *
+ *
+ *
+ *
+ *
+
+
+MARCO DE MIERDA, no pongas los mismos nombres de la url en el public hijo de tu madre
+
+
+
+
+
  * Retorna mensaje encriptado
  * @param {string} message mensaje a encriptar
  * @param {string} key llave para encriptar
