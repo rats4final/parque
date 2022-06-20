@@ -33,6 +33,11 @@ class User extends Authenticatable implements MustVerifyEmail
         'id_rol'
     ];
 
+    public function usuario_opera_servicio()//un servicio tiene solo 1 categoria
+    {
+        return $this->hasMany(usuario_opera_servicioModelo::class,'users_id_user');
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *
