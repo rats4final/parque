@@ -7,7 +7,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\ServiciosController;
 use App\Http\Controllers\categoriaController;
 use App\Http\Controllers\FacturasController;
-
+use App\Http\Controllers\clienteController;
 
 
 /*
@@ -35,6 +35,7 @@ Route::get('/home', function(){
     return view('home');
 })->middleware(['auth','verified']);
 
+Route::resource('cliente', clienteController::class);
 Route::resource('servicio', ServiciosController::class);
 Route::resource('rol', rolController::class);
 Route::resource('user', UserController::class)->middleware(['auth','verified']);

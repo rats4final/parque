@@ -16,10 +16,11 @@ class CreateUsersTable extends Migration
             $table->date('fecha_nac_user')->nullable();
             $table->string('img_user')->nullable();
             $table->string('celular')->nullable();
-            $table->string('email')->unique();
+            $table->integer('ci')->nullable();
+            $table->string('email')->unique()->nullable();
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
+            $table->string('password')->nullable();
+            $table->rememberToken()->nullable();
             $table->integer('id_rol')->unsigned()->nullable();
             $table->foreign('id_rol')->references('id_rol')->on('Roles');
             $table->timestamps();

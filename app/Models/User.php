@@ -25,6 +25,7 @@ class User extends Authenticatable implements MustVerifyEmail
         'apellido',
         'fecha_nac_user',
         'celular',
+        'ci',
         'email',
         'email_verified_at',
         'password',
