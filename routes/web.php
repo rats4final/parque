@@ -8,6 +8,7 @@ use App\Http\Controllers\ServiciosController;
 use App\Http\Controllers\categoriaController;
 use App\Http\Controllers\FacturasController;
 use App\Http\Controllers\usuario_opera_servicioController;
+use App\Http\Controllers\clienteController;
 
 /*
 |--------------------------------------------------------------------------
