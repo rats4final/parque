@@ -27,6 +27,10 @@ class Servicios extends Model
     public function detalleFacturas(){
         return $this->hasMany(detalleFactura::class,'servicios_id_servicio','id_servicio');
     }
+    public function usuario_opera_servicio()//un servicio tiene solo 1 categoria
+    {
+        return $this->hasMany(usuario_opera_servicioModelo::class,'servicios_id_servicio');
+    }
 }
 
 

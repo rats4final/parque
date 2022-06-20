@@ -9,7 +9,7 @@ use App\Models\Servicios;
 use Carbon\Carbon;
 use illuminate\Support\Facades\Auth;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
-
+use App\Models\User;
 class FacturasController extends Controller
 {
 
@@ -22,22 +22,19 @@ class FacturasController extends Controller
 
     public function create()
     {
-
+        $clientes = User::all();
         $servicios = Servicios::get();
-        return view('admin.factura.create',compact('servicios'));
+
+        $ultima_id = Factura::max('id_factura');
+        //dd($ultima_id);
+        return view('admin.factura.create',compact('servicios','clientes','ultima_id'));
 
     }
 
 
     public function store(Request $request)
     {
-        $factura = Factura::create($request->all()+[
-            'user'=> Auth::user()->id_users, //no se si es id o id_users
-            'fecha_emision'=>Carbon::now('America/Santiago'),//cambiar a datetime
-            'fecha_maxima_emision'=> Carbon::now('America/Santiago'),//sumarle una cantidad de dias
-            'autorizacion' => 1231245,
-            'codigo_control' => 'hola_XD'
-        ]);
+       $factura = Factura::create($request->all()+['user'=> Auth::user()->id_users]);
 
         foreach ($request->id_servicio as $key => $servicio) {
             $results[] = array("servicios_id_servicio"=>$request->id_servicio[$key],
@@ -47,6 +44,9 @@ class FacturasController extends Controller
 
         $factura->detalleFacturas()->createMany($results);
         return redirect()->route('factura.index');
+
+
+        // return $factura;
 
 
 
