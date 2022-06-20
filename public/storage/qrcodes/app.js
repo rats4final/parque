@@ -82,8 +82,8 @@ async function generatePDF(Nombres ,Apellido, Datos=[] ){
     pdf.text("NIT/CI:" , 10 ,143);
     pdf.setFontSize(10);
     pdf.text("----------------------------------------------" , 10 ,152);
-    /* Aquí deberías añadir los datos de la factura */
-    datos.foreach(element =>  {})
+    /* Aquí deberías añadir los datos de la factura 
+    datos.foreach(element =>  {}) */
 
 
 

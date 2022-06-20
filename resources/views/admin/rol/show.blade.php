@@ -1,4 +1,4 @@
-@extends('admin.rol.layout')
+@extends('layouts.nav')
 @section('content')
 <div class="card">
   <div class="card-header">Pagina de Rol</div>

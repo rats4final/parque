@@ -44,7 +44,7 @@
 
 
 
-    <form action="{{ route('factura.store') }}" method="POST" id="form">
+<form action="{{ route('factura.store') }}" method="POST" id="form">
 
     @csrf
 
@@ -79,7 +79,7 @@
                                     @if ($cliente->id_rol == 2  )
                                     {{-- <option value="{{$cliente->id_user}}">{{$cliente->name . " " .$cliente->apellido}}</option> --}}
 
-                                    <option value="{{$cliente}}">{{$cliente->ci}}</option>
+                                    <option value="{{$cliente}}">{{$cliente->name}}</option>
                                     @endif
                                    @endforeach
                                   </select>

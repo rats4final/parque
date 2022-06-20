@@ -16,7 +16,7 @@ class CreateUsersTable extends Migration
             $table->date('fecha_nac_user')->nullable();
             $table->string('img_user')->nullable();
             $table->string('celular')->nullable();
-            $table->integer('ci')->nullable();
+            $table->integer('ci')->nullable(); //como que integer hijo de perra
             $table->string('email')->unique()->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password')->nullable();
