@@ -32,11 +32,64 @@
         integrity="sha512-8QFTrG0oeOiyWo/VM9Y8kgxdlCryqhIxVeRpWSezdRRAvarxVtwLnGroJgnVW9/XBRduxO/z1GblzPrMQoeuew=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     {{-- Dropify --}}
-</head>
 
+    {{-- Estilos side --}}
+    <link href="{{URL::asset('css/styles_nav.css')}}" rel="stylesheet"/>
+    {{-- Estilos side --}}
+
+    {{-- Bootstrap Icons --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    {{-- Bootstrap Icons --}}
+</head>
 <body>
-    @yield('contenido')
-    <script src="js/tables.js"></script> {{--Datatables--}}
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar-->
+        <div class="border-end bg-white" id="sidebar-wrapper">
+            <div class="sidebar-heading border-bottom bg-light">Monte Mayor</div>
+            <div class="list-group list-group-flush">
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{{url('/')}}"><i class="bi bi-house-door"></i>Inicio</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3"
+                    href="{{ url('/home') }}"><i class="bi bi-speedometer2">Dashboard</i></a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{{route('factura.index')}}"><i class="bi bi-ticket-perforated">Ventas</i></a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{{route('rol.index')}}"><i class="bi bi-person-plus"></i>Roles</i></a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{{route('servicio.index')}}"><i class="bi bi-play"></i>Servicios</i></a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{{route('categoria.index')}}"><i class="bi bi-share"></i>Categorias Servicios</i></a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{{route('usuario_opera_servicio.index')}}"><i class="bi bi-tools"></i>Operadores</i></a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{{route('user.index')}}"><i class="bi bi-people"></i></i>Usuarios</i></a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!"><i class="bi bi-bookmark"></i>Acerca de</a>
+
+            </div>
+
+
+        </div>
+        <!-- Page content wrapper-->
+        <div id="page-content-wrapper">
+            <!-- Top navigation-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                <div class="container-fluid">
+                    <button class="btn btn-outline-primary" id="sidebarToggle"><i class="bi bi-list-ul"></i></button>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation"><span
+                            class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                            <li class="nav-item active"><a class="nav-link" href="{{url('/')}}">Home</a></li>
+                            <form action="{{route('logout')}}" method="POST"> @csrf <button type="submit" class="btn btn-secondary btn-sm">Salir</button></form>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Page content-->
+            <div class="container-fluid">
+                @yield('contenido')
+            </div>
+        </div>
+    </div>
+
+    <script src="{{URL::asset('js/scripts_nav.js')}}"></script>
+    <script src="{{URL::asset('js/tables.js')}}"></script> {{--usar este metodo siempre--}} {{-- Datatables --}}
+    @yield('scripts')
 </body>
 
 </html>

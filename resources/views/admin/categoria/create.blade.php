@@ -1,5 +1,5 @@
-@extends('admin.categoria.layout')
-@section('content')
+@extends('layouts.nav')
+@section('contenido')
 <div class="card">
   <div class="card-header">Crear Nueva Categoria</div>
   <div class="card-body">
@@ -15,4 +15,4 @@
 
   </div>
 </div>
-@stop
+@endsection

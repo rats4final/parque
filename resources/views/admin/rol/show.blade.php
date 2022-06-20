@@ -1,5 +1,5 @@
 @extends('layouts.nav')
-@section('content')
+@section('contenido')
 <div class="card">
   <div class="card-header">Pagina de Rol</div>
   <div class="card-body">
@@ -13,3 +13,4 @@
 
   </div>
 </div>
+@endsection

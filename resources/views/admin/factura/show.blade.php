@@ -4,22 +4,22 @@
         <h2>Detalles de la venta</h2>
     </div>
     <div class="container">
-        <div class="row">
-            <div class="col-md-4 text-center">Cliente</div>
-            <div class="col-md-4 text-center">Vendedor</div>
-            <div class="col-md-4 text-center">Numero de venta</div>
+        <div class="row mt-4">
+            <div class="col-md-4 text-center"><strong>Cliente</strong></div>
+            <div class="col-md-4 text-center"><strong>Vendedor</strong></div>
+            <div class="col-md-4 text-center"><strong>Numero de venta</strong></div>
         </div>
-        <div class="row">
-            <div class="col-md-4 text-center">1 placeholder</div>
-            <div class="col-md-4 text-center">2</div>
-            <div class="col-md-4 text-center">3</div>
+        <div class="row mt-4">
+            <div class="col-md-4 text-center">{{$factura->cliente}}</div>
+            <div class="col-md-4 text-center">{{$factura->user}}</div>
+            <div class="col-md-4 text-center">{{$factura->id_factura}}</div>
         </div>
         <div class="row">
             <div class="card">
                 <div class="card-body">
                     <div class="table-responsive col-md-12">
-                        <table id="detalleFacturass" class="table">
-                            <thead>
+                        <table id="detalleFacturass" class="table table-striped table-hover table-bordered">
+                            <thead class="table-dark">
                                 <tr>
                                     <th>Producto</th>
                                     <th>Precio Venta (BS)</th>

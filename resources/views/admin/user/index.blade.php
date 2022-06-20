@@ -10,8 +10,8 @@
 
  @endif
 
-<img src="" alt="">
-{!! QrCode::generate('Transfórmame en un QrCode!'); !!}
+{{-- <img src="" alt="">
+{!! QrCode::generate('Transfórmame en un QrCode!'); !!} --}}
 
 
 <div class="container mt-5">

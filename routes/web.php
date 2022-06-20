@@ -35,13 +35,13 @@ Route::get('/home', function(){
     return view('home');
 })->middleware(['auth','verified']);
 
-Route::resource('cliente', clienteController::class);
-Route::resource('servicio', ServiciosController::class);
-Route::resource('rol', rolController::class);
+Route::resource('cliente', clienteController::class)->middleware(['auth','verified']);
+Route::resource('servicio', ServiciosController::class)->middleware(['auth','verified']);
+Route::resource('rol', rolController::class)->middleware(['auth','verified']);
 Route::resource('user', UserController::class)->middleware(['auth','verified']);
-Route::resource('categoria', categoriaController::class);
-Route::resource('factura', FacturasController::class);
-Route::resource('usuario_opera_servicio', usuario_opera_servicioController::class);
+Route::resource('categoria', categoriaController::class)->middleware(['auth','verified']);
+Route::resource('factura', FacturasController::class)->middleware(['auth','verified']);
+Route::resource('usuario_opera_servicio', usuario_opera_servicioController::class)->middleware(['auth','verified']);
 
 // User::factory()->create(['email'=>'admin@gmail.com']);
 // Route::view('login_old', 'login_old');

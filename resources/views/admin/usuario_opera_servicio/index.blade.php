@@ -1,6 +1,4 @@
-@extends('admin.usuario_opera_servicio.layout')
-@section('content')
-@extends('layouts.sidebar')
+@extends('layouts.nav')
 @section('contenido')
     <div class="container">
         <div class="row">

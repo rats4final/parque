@@ -1,5 +1,5 @@
-@extends('admin.usuario_opera_servicio.layout')
-@section('content')
+@extends('layouts.nav')
+@section('contenido')
 <div class="card">
   <div class="card-header">Crear Nueva usuario_opera_servicio</div>
   <div class="card-body">
@@ -11,13 +11,13 @@
           @foreach ($servicio as $servicio)
               <option class="input--style-5" value="{{ $servicio->id_servicio }}">{{ $servicio->nombre_servicio }}</option>
           @endforeach
-        </select>        
+        </select>
         <label>Nombre</label></br>
         <select class="input-group" name="users_id_user" id="users_id_user">
           @foreach ($users as $users)
               <option class="input--style-5" value="{{ $users->id_users }}">{{ $users->name }}</option>
           @endforeach
-        </select>         
+        </select>
         <label>Inicio del Turno</label></br>
         <input type="date" class="form-control" name="turno_inicio" id="turno_inicio">
         <label>Fin del Turno</label></br>
@@ -27,4 +27,4 @@
 
   </div>
 </div>
-@stop
+@endsection

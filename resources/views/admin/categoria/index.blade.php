@@ -1,5 +1,5 @@
-@extends('admin.categoria.layout')
-@section('content')
+@extends('layouts.nav')
+@section('contenido')
     <div class="container">
         <div class="row">
             <div class="col-md-9">
