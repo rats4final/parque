@@ -7,8 +7,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\ServiciosController;
 use App\Http\Controllers\categoriaController;
 use App\Http\Controllers\FacturasController;
-
-
+use App\Http\Controllers\usuario_opera_servicioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,6 +39,7 @@ Route::resource('rol', rolController::class);
 Route::resource('user', UserController::class)->middleware(['auth','verified']);
 Route::resource('categoria', categoriaController::class);
 Route::resource('factura', FacturasController::class);
+Route::resource('usuario_opera_servicio', usuario_opera_servicioController::class);
 
 // User::factory()->create(['email'=>'admin@gmail.com']);
 // Route::view('login_old', 'login_old');

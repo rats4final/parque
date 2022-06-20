@@ -24,6 +24,10 @@ class Servicios extends Model
     {
         return $this->belongsTo(categoriaModelo::class,'id_categoria');
     }
+    public function usuario_opera_servicio()//un servicio tiene solo 1 categoria
+    {
+        return $this->hasMany(usuario_opera_servicioModelo::class,'servicios_id_servicio');
+    }
 }
 
 
