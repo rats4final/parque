@@ -22,7 +22,10 @@ class Servicios extends Model
 
     public function categorias()//un servicio tiene solo 1 categoria
     {
-        return $this->belongsTo(categoriaModelo::class,'id_categoria');
+        return $this->belongsTo(categoriaModelo::class,'id_categoria','id_categoria');
+    }
+    public function detalleFacturas(){
+        return $this->hasMany(detalleFactura::class,'servicios_id_servicio','id_servicio');
     }
 }
 

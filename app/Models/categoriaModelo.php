@@ -14,6 +14,6 @@ class categoriaModelo extends Model
 
     public function servicios()//una categoria tiene muchos servicios
     {
-        return $this->hasMany(Servicios::class);
+        return $this->hasMany(Servicios::class,'id_categoria','id_categoria');
     }
 }

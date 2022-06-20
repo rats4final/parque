@@ -19,11 +19,13 @@ class detalleFactura extends Model
         'descuento'
     ];
 
-    // public function servicios(){
-    //     return $this->belongsTo(Servicios::class,'id_servicio');
-    // } // al parecer el belongsto si afecta, habra que investigar porque
-
+    public function servicio(){
+        return $this->belongsTo(Servicios::class,'servicios_id_servicio','id_servicio');
+    } //XD
+    //NOTA IMPORTANTE, cuando usas belongsTo, debes referenciar a la misma columna dentro de la tabla relacional
+    //la cual viene de forma foranea de su tabla original
     public function factura(){
-        return $this->belongsTo(Factura::class,'id_factura');
+        return $this->belongsTo(Factura::class,'facturas_id_factura','id_factura');
     }
+
 }

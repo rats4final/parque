@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\detalleFactura;
 use App\Models\Factura;
 use Illuminate\Http\Request;
 use App\Models\Servicios;
@@ -44,7 +45,7 @@ class FacturasController extends Controller
             ,"descuento"=>$request->descuento[$key]);
         }
 
-        $factura->detalleFactura()->createMany($results);
+        $factura->detalleFacturas()->createMany($results);
         return redirect()->route('factura.index');
 
 
@@ -59,9 +60,15 @@ class FacturasController extends Controller
     }
 
 
-    public function show($id)
+    public function show(Factura $factura)
     {
-        //
+        $subtotal = 0 ;
+        $detalleFacturas = $factura->detalleFacturas;
+        foreach ($detalleFacturas as $detalleFactura) {
+            $subtotal += $detalleFactura->cantidad*$detalleFactura->precio_unitario-$detalleFactura->cantidad* $detalleFactura->precio_unitario*$detalleFactura->descuento/100;
+        }
+        //dd($detalleFacturas);
+        return view('admin.factura.show', compact('factura', 'detalleFacturas', 'subtotal'));
     }
 
 
