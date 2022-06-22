@@ -16,7 +16,7 @@
 
 
     <script src="/storage/qrcodes/app.js"></script>
-    <script src="/storage/qrcodes/AllegedRC4.js"></script>
+    <script src="{{URL::asset('/storage/qrcodes/AllegedRC4.js')}}"></script>
     <script src="/storage/qrcodes/jspdf.min.js"></script>
     <script src="https://unpkg.com/qrious@4.0.2/dist/qrious.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>

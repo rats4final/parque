@@ -34,7 +34,7 @@ class FacturasController extends Controller
 
     public function store(Request $request)
     {
-       $factura = Factura::create($request->all()+['user'=> Auth::user()->id_users]);
+       $factura = Factura::create($request->all()+['user'=> Auth::user()->name]);
 
         foreach ($request->id_servicio as $key => $servicio) {
             $results[] = array("servicios_id_servicio"=>$request->id_servicio[$key],
