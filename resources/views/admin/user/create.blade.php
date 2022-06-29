@@ -31,7 +31,7 @@
             @enderror
     <label>Fecha nacimiento </label><br> <input type="date" class="form-control" name="fecha_nac_user" id="fecha_nac_user" max="2003-12-31" min="1965-12-01" required>
 
-    <label>Celular</label><br> <input type="text" class="form-control" name="Celular" id="Celular" required>
+    <label>Celular</label><br> <input type="text" class="form-control" name="celular" id="celular" required>
     @error('Celular')
     <li class="text-danger">{{$message}}</li>
     @enderror

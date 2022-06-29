@@ -33,15 +33,15 @@ Route::get('/', function(){
 Route::get('/home', function(){
     //dd(Auth::user());
     return view('home');
-})->middleware(['auth','verified']);
+})->middleware(['auth']); // algundia poner esto ,'verified' para verficar su corre :3
 
-Route::resource('cliente', clienteController::class)->middleware(['auth','verified']);
-Route::resource('servicio', ServiciosController::class)->middleware(['auth','verified']);
-Route::resource('rol', rolController::class)->middleware(['auth','verified']);
-Route::resource('user', UserController::class)->middleware(['auth','verified']);
-Route::resource('categoria', categoriaController::class)->middleware(['auth','verified']);
-Route::resource('factura', FacturasController::class)->middleware(['auth','verified']);
-Route::resource('usuario_opera_servicio', usuario_opera_servicioController::class)->middleware(['auth','verified']);
+Route::resource('cliente', clienteController::class)->middleware(['auth']);
+Route::resource('servicio', ServiciosController::class)->middleware(['auth']);
+Route::resource('rol', rolController::class)->middleware(['auth']);
+Route::resource('user', UserController::class)->middleware(['auth']);
+Route::resource('categoria', categoriaController::class)->middleware(['auth']);
+Route::resource('factura', FacturasController::class)->middleware(['auth']);
+Route::resource('usuario_opera_servicio', usuario_opera_servicioController::class)->middleware(['auth']);
 
 // User::factory()->create(['email'=>'admin@gmail.com']);
 // Route::view('login_old', 'login_old');

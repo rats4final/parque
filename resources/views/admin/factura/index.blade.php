@@ -40,9 +40,16 @@
                                     <td>{{ $factura->ci_cliente }}</td>
                                     <td>{{ $factura->codigo_control }}</td>
                                     <td><a title="Detalles" class="btn btn-success btn-sm"
-                                            href="{{ route('factura.show', $factura) }}"><i class="bi bi-eye-fill"></i></a> <a
+                                            href="{{ route('factura.show', $factura) }}"><i class="bi bi-eye-fill"></i></a>
+
+                                            {{-- <a
                                             class="btn btn-danger btn-sm"
-                                            href="{{ route('factura.destroy', $factura) }}"><i class="bi bi-trash-fill"></i></a></td>
+
+                                            href="{{ route('factura.destroy', $factura) }}"><i class="bi bi-trash-fill"></i></a> --}}
+
+                                        </td>
+
+
                                 </tr>
                             @endforeach
                         </tbody>

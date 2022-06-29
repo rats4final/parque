@@ -1,23 +1,4 @@
-/**
- *
- *
- *
- *
- *
 
-
-MARCO DE MIERDA, no pongas los mismos nombres de la url en el public hijo de tu madre
-
-
-
-
-
- * Retorna mensaje encriptado
- * @param {string} message mensaje a encriptar
- * @param {string} key llave para encriptar
- * @param {boolean} unscripted sin guion TRUE|FALSE
- * @return {string} mensaje encriptado
-*/
 function encryptMessageRC4(message, key,unscripted){
     var state = new Array(255);
     var x = 0;

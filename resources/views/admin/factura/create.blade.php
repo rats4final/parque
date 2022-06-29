@@ -16,7 +16,7 @@
 
 
     <script src="/storage/qrcodes/app.js"></script>
-    <script src="{{URL::asset('/storage/qrcodes/AllegedRC4.js')}}"></script>
+    <script src="{{URL::asset('/storage/qrcodes/Codigo_Control.js')}}"></script>
     <script src="/storage/qrcodes/jspdf.min.js"></script>
     <script src="https://unpkg.com/qrious@4.0.2/dist/qrious.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -54,6 +54,8 @@
     <input type="hidden" id="fecha_maxima_emision" name="fecha_maxima_emision">
     <input type="hidden" id="autorizacion" name="autorizacion">
     <input type="hidden" id="codigo_control" name="codigo_control">
+
+    <input type="hidden" id="ci_cliente" name="ci_cliente">
 
     <input type="hidden" id="ultima" value="{{$ultima_id}}">
 
@@ -364,6 +366,7 @@
                 document.getElementById('name').value=Datos['name'];
 
                 document.getElementById('cliente_nit').value=Datos['ci'];
+                document.getElementById('ci_cliente').value=Datos['ci'];
 
 
 

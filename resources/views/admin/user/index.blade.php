@@ -45,11 +45,12 @@
                                 </thead>
                                 <tbody>
                                 @foreach($usuario as $item)
+                                    @if ($item->id_rol == 1 )
                                     <tr>
                                         <td>{{ $item->name }}</td>
                                         <td>{{ $item->apellido }}</td>
                                         <td>{{ $item->fecha_nac_user }}</td>
-                                        <td>{{ $item->Celular }}</td>
+                                        <td>{{ $item->celular }}</td>
                                         <td>{{ $item->email }}</td>
 
                                         <td>
@@ -66,6 +67,8 @@
                                             </form>
                                         </td>
                                     </tr>
+
+                                    @endif
                                 @endforeach
                                 </tbody>
                             </table>

@@ -84,8 +84,10 @@ class FacturasController extends Controller
     }
 
 
-    public function destroy($id)
+    public function destroy(Factura $factura  )
     {
         //
+        $factura->delete();
+        return redirect()->route('factura.index');
     }
 }

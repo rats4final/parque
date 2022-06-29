@@ -20,6 +20,8 @@ class UserSeeder extends Seeder
             [
             'name' => 'Juan',
             'apellido' => 'Bonaparte',
+            'fecha_nac_user' => '2001-07-08',
+            'celular' => '7894564',
             'email' => 'superadmin@gmail.com',
             'password' => Hash::make('superadmin2022'),
             'id_rol' => 1

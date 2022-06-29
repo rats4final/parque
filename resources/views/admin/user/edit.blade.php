@@ -22,7 +22,7 @@
 
 
             <label>Celular</label></br>
-            <input type="number" name="Celular" id="Celular" value="{{$user->Celular}}" class="form-control"></br>
+            <input type="number" name="celular" id="celular" value="{{$user->celular}}" class="form-control"></br>
 
             <label>email</label></br>
             <input type="email" name="email" id="email" value="{{$user->email}}" class="form-control"></br>
