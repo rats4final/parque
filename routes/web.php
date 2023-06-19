@@ -35,6 +35,11 @@ Route::get('/home', function(){
     return view('home');
 })->middleware(['auth']); // algundia poner esto ,'verified' para verficar su corre :3
 
+Route::get('/chatbot', function (){
+   return view('user.chatbot');
+})->name('chatbot');
+
+
 Route::resource('cliente', clienteController::class)->middleware(['auth']);
 Route::resource('servicio', ServiciosController::class)->middleware(['auth']);
 Route::resource('rol', rolController::class)->middleware(['auth']);

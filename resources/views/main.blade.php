@@ -107,6 +107,20 @@
                         </div>
                     </div>
                 </div>
+                <div class="container">
+                    <div class="row row-50 justify-content-xl-between align-items-lg-center">
+                        <div class="col-lg-6 wow fadeInLeft">
+                            <div class="box-image"><img class="box-image-static"
+                                                        src="https://nordvpn.com/wp-content/uploads/blog-social-what-is-chatbot-1200x628-1.png"
+                                                        alt="" width="483" height="327" />
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-xl-5 wow fadeInRight">
+                            <h2>Prueba nuestro chatbot!</h2>
+                            <p><a href="{{route('chatbot')}}">Ir al chatbot</a></p>
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
         <footer class="section footer-minimal context-dark">
