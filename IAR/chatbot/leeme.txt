@@ -1,0 +1,6 @@
+instalar las librerias correspondientes para poder ejecutar el codigo en python
+
+pip install json
+pip install nltk
+pip install flask
+pip install flask_cors

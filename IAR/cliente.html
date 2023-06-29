@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es-BO">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/output.css">
+    <title>Chatbot Parque</title>
+</head>
+<body class="relative">
+    <div class="fixed bottom-0 w-full flex space-x-4 my-6 px-10">
+        <input class="border border-gray-700 w-3/4 block p-2.5" type="text" name="message" id="message" placeholder="Escribe tu mensaje aqui">
+        <button class="w-1/4 h-10 rounded-lg bg-blue-400" id="enviar" type="submit">Enviar</button>
+    </div>
+    <div class="overflow-auto border border-gray-800 h-96" id="historial">
+        <!-- <p class="bg-green-600 m-3 rounded-lg w-max text-white p-2" id="respuesta"></p> -->
+    </div>
+    <script src="./handler.js"></script>
+</body>
+</html>

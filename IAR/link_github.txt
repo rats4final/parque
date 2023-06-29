@@ -1,0 +1,15 @@
+https://github.com/rats4final/parque
+
+para tener el proyecto ejecutar:
+git clone https://github.com/rats4final/parque.git
+
+luego crear una base vacia en mysql con el nombre parque
+
+luego en la carpeta raiz del proyecto, ejecutar:
+
+composer install
+npm install
+
+php artisan migrate
+php artisan db:seed
+php artisan serve
